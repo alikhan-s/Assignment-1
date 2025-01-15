@@ -18,7 +18,7 @@ public class Main {
         Cinema cinema2 = new Cinema("Kinopark 7 IMAX Keruen", "Dostyk, 9");
 
         // TicketBooking
-        System.out.println(cinema2.bookTicket(movie2.getData(), viewer3.checkAge(movie2.getAgeLimit())));
+        System.out.println(cinema2.bookTicket(movie3.getData(), viewer2.checkAge(movie3.getAgeLimit())));
         System.out.println();
 
         // Display instances

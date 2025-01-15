@@ -19,7 +19,7 @@ public abstract class CinemaBody {
 
     public static void filterByName(Movie movie1, Movie movie2, Movie movie3) {
         List<Movie> movies = Arrays.asList(movie1, movie2, movie3);
-        System.out.println("Filtering by name: ");
+        System.out.println("Filtering by duration and sorting by title: ");
         movies.stream()
                 .filter(movie -> movie.getDuration() > 130)
                 .sorted(Comparator.comparing(Movie::getName))
