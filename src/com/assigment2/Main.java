@@ -19,6 +19,7 @@ public class Main {
 
         // TicketBooking
         System.out.println(cinema2.bookTicket(movie2.getData(), viewer3.checkAge(movie2.getAgeLimit())));
+        System.out.println();
 
         // Display instances
 //        System.out.println(movie1);
@@ -38,11 +39,6 @@ public class Main {
 //        System.out.println();
 
         // Data pool with sorting and filtering
-//        List<Movie> movies = Arrays.asList(movie1, movie2, movie3);
-//        System.out.println("Filtering by name: ");
-//        movies.stream()
-//                .filter(movie -> movie.getDuration() > 130)
-//                .sorted(Comparator.comparing(Movie::getName))
-//                .forEach(System.out::println);
+        CinemaBody.filterByName(movie1, movie2, movie3);
     }
 }

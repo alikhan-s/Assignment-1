@@ -1,6 +1,6 @@
 package com.assigment2;
 
-import java.util.Objects;
+import java.util.*;
 
 public abstract class CinemaBody {
     public CinemaBody(String name) {
@@ -15,6 +15,15 @@ public abstract class CinemaBody {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public static void filterByName(Movie movie1, Movie movie2, Movie movie3) {
+        List<Movie> movies = Arrays.asList(movie1, movie2, movie3);
+        System.out.println("Filtering by name: ");
+        movies.stream()
+                .filter(movie -> movie.getDuration() > 130)
+                .sorted(Comparator.comparing(Movie::getName))
+                .forEach(System.out::println);
     }
 
     @Override
